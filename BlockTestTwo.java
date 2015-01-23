@@ -1,8 +1,8 @@
 // A+ Computer Science  -  www.apluscompsci.com
-//Name -
-//Date -
-//Class -
-//Lab  -
+//Name - Lynnsey Martin
+//Date - 1-23-15
+//Class - 4
+//Lab  - 
 
 import java.awt.Color;
 import java.awt.Graphics;

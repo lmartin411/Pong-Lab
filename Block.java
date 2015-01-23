@@ -18,11 +18,11 @@ public class Block
 
 	public Block()
 	{
-      xPos = 0;
-      yPos = 0;
-      width = 1;
-      height = 1;
-      color = Color.red; 
+      xPos = 100;
+      yPos = 150;
+      width = 10;
+      height = 10;
+      color = Color.black; 
 	}
 
 	// add other Block constructors - x , y , width, height, color
@@ -41,7 +41,7 @@ public class Block
    {
       xPos = x;
       yPos = y;
-      width = w
+      width = w;
       height = h;
       color = c;
    }
@@ -80,11 +80,6 @@ public class Block
    public void setHeight ( int h )
    {
       height  = h;
-   }
-   
-   public void setColor ( Color c)
-   {
-      color = c;
    }
    
 	public int getX()
@@ -127,14 +122,15 @@ public class Block
 	public void draw(Graphics window, Color col)
 	{
       window.setColor(col);
-      windor.fillRect(getX(), getY(), getWidth(), getHeight());
+      window.fillRect(getX(), getY(), getWidth(), getHeight());
 	}
 
    // review the equals method from book and library
    // show me your completed equals method please
 	public boolean equals(Object obj)
 	{
-      if (obj.getX() == getX() && obj.getY() == getY() && obj.getWidth() == getWidth() && obj.getHeight() == getHeight() && obj.getColor.equals(getColor())) {
+      Block tmp = (Block)obj;
+      if (tmp.getX() == getX() && tmp.getY() == getY() && tmp.getWidth() == getWidth() && tmp.getHeight() == getHeight() && tmp.getColor().equals(getColor())) {
          return true;
       }
       else {
