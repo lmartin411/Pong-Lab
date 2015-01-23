@@ -16,6 +16,9 @@ public class Pong extends AbstractPong
   public Pong()
   {
     //set up all variables related to the game
+    ball = new Ball(335, 200);
+    leftPaddle = new Paddle();
+    right Paddle = new Paddle(780, 10);
   }
 
   public void render(Graphics window)
