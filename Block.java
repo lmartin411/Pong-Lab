@@ -28,13 +28,21 @@ public class Block
 	// add other Block constructors - x , y , width, height, color
    // you can find what constructors you need by looking at BlockTestOne and BlockTestTwo
    
+   public Block (int x, int y) {
+      xPos = x;
+      yPos = y;
+      width = 10;
+      height = 10;
+      color = Color.black;
+   }
+   
    public Block( int x, int y, int w, int h )
    {
       xPos = x;
       yPos = y;
       width = w;
       height = h;
-      color = Color.red;
+      color = Color.black;
    }
    
    public Block ( int x, int y, int w, int h, Color c)
