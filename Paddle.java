@@ -24,17 +24,17 @@ public class Paddle extends Block
       super(x, y);
       speed = 5;
    }
-   
+
    public Paddle(int x, int y, int s) {
       super(x, y);
       speed = s;
   }
-  
+
    public Paddle (int x, int y, int w, int h) {
       super(x, y, w, h);
       speed = 5;
    }
-   
+
    public Paddle (int x, int y, int w, int h, int s) {
       super(x, y, w, h);
       speed = s;
@@ -44,7 +44,7 @@ public class Paddle extends Block
       super(x, y, w, h, c);
       speed = 5;
    }
-   
+
    public Paddle (int x, int y, int w, int h, Color c, int s) {
       super (x, y, w, h, c);
       speed = s;
@@ -70,7 +70,7 @@ public class Paddle extends Block
    }
 
   //add a toString() method
-  
+
   public String toString() {
      return super.toString() + " " + speed;
   }

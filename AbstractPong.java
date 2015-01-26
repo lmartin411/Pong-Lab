@@ -98,4 +98,3 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
     }catch(Exception e) { }
   }
 }
-

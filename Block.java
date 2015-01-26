@@ -22,12 +22,12 @@ public class Block
       yPos = 150;
       width = 10;
       height = 10;
-      color = Color.black; 
+      color = Color.black;
 	}
 
 	// add other Block constructors - x , y , width, height, color
    // you can find what constructors you need by looking at BlockTestOne and BlockTestTwo
-   
+
    public Block (int x, int y) {
       xPos = x;
       yPos = y;
@@ -35,7 +35,7 @@ public class Block
       height = 10;
       color = Color.black;
    }
-   
+
    public Block( int x, int y, int w, int h )
    {
       xPos = x;
@@ -44,7 +44,7 @@ public class Block
       height = h;
       color = Color.black;
    }
-   
+
    public Block ( int x, int y, int w, int h, Color c)
    {
       xPos = x;
@@ -66,43 +66,43 @@ public class Block
 	   xPos = x;
       yPos = y;
 	}
-	
+
 	public void setX( int x )
 	{
 	   xPos = x;
 	}
-	
+
 	public void setY( int y )
 	{
 	   yPos = y;
 	}
-	
+
 	// add the other set methods
    // you can see what modifier methods to add by looking at the instance variables
-   
+
    public void setWidth ( int w )
    {
       width = w;
    }
-   
+
    public void setHeight ( int h )
    {
       height  = h;
    }
-   
+
 	public int getX()
 	{
 	   return xPos;
 	}
-	
+
 	public int getY()
 	{
 	   return yPos;
 	}
-	
+
 	//add the other get methods
    // you can see what accessor methods to add by looking at the instance variables
-   
+
    public int getWidth()
 	{
 	   return width;
@@ -146,10 +146,10 @@ public class Block
       }
 	}
 
- 
+
 
 	//add a toString() method  - x , y , width, height, color
-   
+
    public String toString()
    {
       return "" + xPos + " " + yPos + " " + width + " " + height + " " + color;

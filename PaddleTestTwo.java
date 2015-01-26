@@ -36,7 +36,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 		this.addKeyListener(this);
 		new Thread(this).start();
 	}
-	
+
 	public void update(Graphics window)
 	{
 		paint(window);
@@ -103,7 +103,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
 	{
 		//no code needed here
 	}
-	
+
    public void run()
    {
    	try
@@ -116,6 +116,6 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
       }catch(Exception e)
       {
       }
-  	}	
-	
+  	}
+
 }

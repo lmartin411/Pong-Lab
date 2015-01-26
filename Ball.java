@@ -35,13 +35,13 @@ public class Ball extends Block
       xSpeed = 3;
       ySpeed = 1;
    }
-   
+
    public Ball (int xp, int yp, int w, int h, Color c) {
       super(xp, yp, w, h, c);
       xSpeed = 3;
       ySpeed = 1;
    }
-   
+
    public Ball (int xp, int yp, int w, int h, Color c, int xs, int ys) {
       super (xp, yp, w, h, c);
       xSpeed = xs;
@@ -49,15 +49,15 @@ public class Ball extends Block
    }
 
   // add the set methods
-  
+
   public void setXSpeed(int x) {
    xSpeed = x;
   }
-  
+
   public void setYSpeed (int y) {
    ySpeed = y;
   }
-  
+
   public void setSpeed (int x, int y) {
    xSpeed = x;
    ySpeed = y;
@@ -89,19 +89,19 @@ public class Ball extends Block
   }
 
   //add the get methods
-  
+
   public int getXSpeed() {
    return xSpeed;
   }
-  
+
   public int getYSpeed() {
    return ySpeed;
   }
 
   //add a toString() method
-  
+
   public String toString() {
    return super.toString() + " " + xSpeed + " " + ySpeed;
   }
-  
+
 }
