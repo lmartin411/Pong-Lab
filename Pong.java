@@ -50,13 +50,13 @@ public class Pong extends AbstractPong
 
 
     //see if the ball hits the left paddle
-    if((ball.getX() <= leftPaddle().getX() + leftPaddle.getWidth() + abs(ball.getXSpeed()) &&
+    if((ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXSpeed()) &&
     (ball.getY() >= leftPaddle.getY() + leftPaddle.getHeight() ||
     ball.getY() + ball.getHeight() >= leftPaddle.getY() &&
     ball.getY() + ball.getHeight() < leftPaddle.getY() + leftPaddle.getHeight())))
     {
         //Set Y speed to negative of current
-        if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - abs(ball.getXSpeed()))
+        if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXSpeed()))
         {
           ball.setYSpeed(ball.getYSpeed() * -1);
         }
@@ -69,13 +69,13 @@ public class Pong extends AbstractPong
     }
 
     //see if the ball hits the right paddle
-    if ((ball.getX() <= rightPaddle().getX() + rightPaddle.getWidth() + abs(ball.getXSpeed()) &&
+    if ((ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth() + Math.abs(ball.getXSpeed()) &&
     (ball.getY() >= rightPaddle.getY() + rightPaddle.getHeight() ||
     ball.getY() + ball.getHeight() >= rightPaddle.getY() &&
     ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight())))
     {
       //Set Y speed to negative of current
-      if(ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth() - abs(ball.getXSpeed()))
+      if(ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth() - Math.abs(ball.getXSpeed()))
       {
         ball.setYSpeed(ball.getYSpeed() * -1);
       }
