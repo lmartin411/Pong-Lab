@@ -24,7 +24,7 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
   {
     keys = new boolean[4];
 
-    setBackground(Color.WHITE);
+    setBackground(Color.black);
     setVisible(true);
 
     new Thread(this).start();

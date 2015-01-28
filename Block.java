@@ -13,7 +13,6 @@ public class Block
 	private int yPos;
 	private int width;
 	private int height;
-
 	private Color color;
 
 	public Block()
@@ -35,6 +34,12 @@ public class Block
       height = 10;
       color = Color.black;
    }
+
+	public Block (int x, int y, Color c) {
+		xPos = x;
+		yPos = y;
+		color = c;
+	}
 
    public Block( int x, int y, int w, int h )
    {

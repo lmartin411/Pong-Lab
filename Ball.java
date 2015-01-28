@@ -29,6 +29,13 @@ public class Ball extends Block
       ySpeed = 1;
    }
 
+   public Ball(int xp, int yp, Color c)
+   {
+     super(xp, yp, c);
+     xSpeed = 3;
+     ySpeed = 1;
+   }
+
    public Ball (int xp, int yp, int w, int h)
    {
       super(xp, yp, w, h);
@@ -66,7 +73,7 @@ public class Ball extends Block
   public void moveAndDraw(Graphics window)
   {
     //draw a white ball at old ball location
-    draw(window, Color.white);
+    draw(window, Color.black);
 
     setX(getX() + xSpeed);
     setY(getY() + ySpeed);

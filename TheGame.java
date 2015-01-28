@@ -15,7 +15,7 @@ public class TheGame extends JFrame
 
 	public TheGame()
 	{
-		super("PONG");
+		super("PONG: The Real Deal!");
 		setSize(WIDTH,HEIGHT);
 		Pong game = new Pong();
 		((Component)game).setFocusable(true);

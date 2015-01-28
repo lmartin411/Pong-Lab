@@ -10,7 +10,6 @@ import java.lang.Math.*;
 
 // JFrame Height: 600 Width: 800
 
-
 public class Pong extends AbstractPong
 {
   private Ball ball;
@@ -20,9 +19,9 @@ public class Pong extends AbstractPong
   public Pong()
   {
     //set up all variables related to the game
-    ball = new Ball(335, 200);
-    leftPaddle = new Paddle(20, 400, 50, 200);
-    rightPaddle = new Paddle(780, 400, 50, 200);
+    ball = new Ball(335, 200, Color.white);
+    leftPaddle = new Paddle(20, 350, 20, 100, Color.white);
+    rightPaddle = new Paddle(760, 350, 20, 100, Color.white);
   }
 
   public void render(Graphics window)
@@ -93,7 +92,24 @@ public class Pong extends AbstractPong
     //see if the paddles need to be moved
     if(keyIsPressed('W') == true)
     {
+      leftPaddle.moveDownAndDraw(window);
+    }
+
+    if(keyIsPressed('Z') == true)
+    {
       leftPaddle.moveUpAndDraw(window);
     }
+
+    if(keyIsPressed('I') == true)
+    {
+      rightPaddle.moveDownAndDraw(window);
+    }
+
+    if(keyIsPressed('M') == true)
+    {
+      rightPaddle.moveUpAndDraw(window);
+    }
+
+
   }
 }
