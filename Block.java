@@ -21,7 +21,7 @@ public class Block
       yPos = 150;
       width = 10;
       height = 10;
-      color = Color.black;
+      color = Color.white;
 	}
 
 	// add other Block constructors - x , y , width, height, color
@@ -32,12 +32,14 @@ public class Block
       yPos = y;
       width = 10;
       height = 10;
-      color = Color.black;
+      color = Color.white;
    }
 
 	public Block (int x, int y, Color c) {
 		xPos = x;
 		yPos = y;
+		width = 10;
+		height = 10;
 		color = c;
 	}
 

@@ -22,7 +22,7 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
 
   public AbstractPong()
   {
-    keys = new boolean[4];
+    keys = new boolean[5];
 
     setBackground(Color.black);
     setVisible(true);
@@ -59,6 +59,7 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
       case 'Z' : return keys[1];
       case 'I' : return keys[2];
       case 'M' : return keys[3];
+      case 'B' : return keys[4];
     }
     return false;
   }
@@ -71,6 +72,7 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
       case 'Z' : keys[1]=true; break;
       case 'I' : keys[2]=true; break;
       case 'M' : keys[3]=true; break;
+      case 'B' : keys[4]=true; break;
     }
   }
 
@@ -82,6 +84,7 @@ abstract public class AbstractPong extends Canvas implements KeyListener, Runnab
       case 'Z' : keys[1]=false; break;
       case 'I' : keys[2]=false; break;
       case 'M' : keys[3]=false; break;
+      case 'B' : keys[4]=false; break;
     }
   }
 

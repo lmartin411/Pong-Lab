@@ -71,7 +71,7 @@ public class Pong extends AbstractPong
     }
 
     //see if the ball hits the right paddle
-    if ((ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth() + Math.abs(ball.getXSpeed()) &&
+    if ((ball.getX() <= rightPaddle.getX() + Math.abs(ball.getXSpeed()) &&
     (ball.getY() >= rightPaddle.getY() + rightPaddle.getHeight() ||
     ball.getY() + ball.getHeight() >= rightPaddle.getY() &&
     ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight())))
@@ -110,6 +110,10 @@ public class Pong extends AbstractPong
       rightPaddle.moveUpAndDraw(window);
     }
 
+    if(keyIsPressed('B') == true)
+    {
+      ball.reset(window);
+    }
 
   }
 }
