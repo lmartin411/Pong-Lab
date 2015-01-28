@@ -8,6 +8,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.lang.Math.*;
 
+// JFrame Height: 600 Width: 800
+
+
 public class Pong extends AbstractPong
 {
   private Ball ball;
@@ -18,8 +21,8 @@ public class Pong extends AbstractPong
   {
     //set up all variables related to the game
     ball = new Ball(335, 200);
-    leftPaddle = new Paddle();
-    rightPaddle = new Paddle(780, 10);
+    leftPaddle = new Paddle(20, 400, 50, 200);
+    rightPaddle = new Paddle(780, 400, 50, 200);
   }
 
   public void render(Graphics window)
@@ -86,9 +89,6 @@ public class Pong extends AbstractPong
         ball.setXSpeed(ball.getXSpeed() * -1);
       }
     }
-
-
-
 
     //see if the paddles need to be moved
     if(keyIsPressed('W') == true)

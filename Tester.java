@@ -14,24 +14,21 @@ public class Tester extends JFrame
 
 	public Tester()
 	{
-		super("PONG TESTER");
+		super("PONG: FOR REAL");
 		setSize(WIDTH,HEIGHT);
-
 		getContentPane().add(new BlockTestTwo());
-
 		getContentPane().add(new BallTestTwo());
-
-		PaddleTestTwo padTest = new PaddleTestTwo();
+		PaddleTestTwo padLeft = new PaddleTestTwo();
+		PaddleTestTwo padRight = new PaddleTestTwo();
 		((Component)padTest).setFocusable(true);
 		getContentPane().add(padTest);
-
 		setVisible(true);
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	public static void main( String args[] )
 	{
+		System.out.println("[DEBUG] Hi");
 		Tester run = new Tester();
 	}
 }
