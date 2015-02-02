@@ -49,7 +49,7 @@ public class Block
       yPos = y;
       width = w;
       height = h;
-      color = Color.black;
+      color = Color.white;
    }
 
    public Block ( int x, int y, int w, int h, Color c)

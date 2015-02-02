@@ -20,6 +20,7 @@ public class Tester extends JFrame
 		getContentPane().add(new BallTestTwo());
 		PaddleTestTwo padLeft = new PaddleTestTwo();
 		PaddleTestTwo padRight = new PaddleTestTwo();
+      PaddleTestTwo padTest = new PaddleTestTwo();
 		((Component)padTest).setFocusable(true);
 		getContentPane().add(padTest);
 		setVisible(true);
