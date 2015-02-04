@@ -54,12 +54,12 @@ public class Pong extends AbstractPong
     }
 
     //see if the ball hits the top or bottom wall
-    if (ball.getY() >= 580) //Find height
+    if (ball.getY() <= 550) //Find height
     {
       ball.setYSpeed(-ball.getYSpeed());
     }
 
-    if (ball.getY() <= 20)
+    if (ball.getY() >= 20)
     {
       ball.setYSpeed(-ball.getYSpeed());
     }
@@ -68,9 +68,9 @@ public class Pong extends AbstractPong
 
     //see if the ball hits the left paddle
     if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXSpeed()) //if the ball is to the left of the left paddle's right side
-    && (ball.getY() >= leftPaddle.getY() || //if the ball is above the paddle's base
-    ball.getY() + ball.getHeight() >= leftPaddle.getY() && //if ball is above paddle's base
-    ball.getY() + ball.getHeight() < leftPaddle.getY() + leftPaddle.getHeight())) //if ball is less than paddle's top
+    && (ball.getY() <= leftPaddle.getY() || //if the ball is above the paddle's base
+    ball.getY() + ball.getHeight() <= leftPaddle.getY()) && //if the ball is above the paddle's base
+    ball.getY() + ball.getHeight() >= leftPaddle.getY() + leftPaddle.getHeight()) //ball is below paddle's top
     {
     
          System.out.println("LEFT: " + ball.getX() + " " + leftPaddle.getX());
