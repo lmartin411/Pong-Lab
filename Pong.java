@@ -15,6 +15,8 @@ public class Pong extends AbstractPong
   private Ball ball;
   private Paddle leftPaddle;
   private Paddle rightPaddle;
+  private int scoreR = 0, scoreL = 0;
+  private Block score;
 
   public Pong()
   {
@@ -22,6 +24,7 @@ public class Pong extends AbstractPong
     ball = new Ball(335, 200, Color.white);
     leftPaddle = new Paddle(20, 350, 20, 100, Color.white);
     rightPaddle = new Paddle(740, 350, 20, 100, Color.white);
+    score = new Block(340, 10, 150, 60, Color.black);
   }
 
   public void render(Graphics window)
@@ -29,15 +32,26 @@ public class Pong extends AbstractPong
     ball.moveAndDraw(window);
     leftPaddle.draw(window);
     rightPaddle.draw(window);
+    window.drawString("Left: " + scoreL + "      Right: " + scoreR, 360, 40);
 
     //see if ball hits left wall or right wall
-    if((ball.getX() <= 20) || (ball.getX() >= 780))
-    {
+    if(ball.getX() <= 20) {
+      scoreR++;
+      score.draw(window);
+      window.drawString("Left: " + scoreL + "      Right: " + scoreR, 360, 40);
       ball.setXSpeed(0);
       ball.setYSpeed(0);
       ball.reset(window);
     }
-
+    
+    else if (ball.getX() >= 780) {
+      scoreL++;
+      score.draw(window);
+      window.drawString("Left: " + scoreL + "      Right: " + scoreR, 360, 40);
+      ball.setXSpeed(0);
+      ball.setYSpeed(0);
+      ball.reset(window);
+    }
 
     //see if the ball hits the top or bottom wall
     if (ball.getY() >= 580) //Find height
@@ -59,7 +73,7 @@ public class Pong extends AbstractPong
     ball.getY() + ball.getHeight() < leftPaddle.getY() + leftPaddle.getHeight())) //if ball is less than paddle's top
     {
     
-         System.out.println("LEFT");
+         System.out.println("LEFT: " + ball.getX() + " " + leftPaddle.getX());
         //Set Y speed to negative of current
         if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXSpeed()))
         {
@@ -80,11 +94,11 @@ public class Pong extends AbstractPong
     ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight())))
     {
     
-      System.out.println("RIGHT");
+      System.out.println("RIGHT: " + ball.getX() + " " + rightPaddle.getX());
       //Set Y speed to negative of current
-      if(ball.getX() <= rightPaddle.getX() + rightPaddle.getWidth() - Math.abs(ball.getXSpeed()))
+      if(ball.getX() >= rightPaddle.getX() + rightPaddle.getWidth() - Math.abs(ball.getXSpeed()))
       {
-        ball.setYSpeed(ball.getYSpeed() * -1);
+        ball.setYSpeed(-ball.getYSpeed());
       }
 
       //Set X speed to negative of current
