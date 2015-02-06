@@ -68,12 +68,11 @@ public class Pong extends AbstractPong
 
     //see if the ball hits the left paddle
     if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXSpeed()) //if the ball is to the left of the left paddle's right side
-    && (ball.getY() <= leftPaddle.getY() || //if the ball is above the paddle's base
-    ball.getY() + ball.getHeight() <= leftPaddle.getY()) && //if the ball is above the paddle's base
-    ball.getY() + ball.getHeight() >= leftPaddle.getY() + leftPaddle.getHeight()) //ball is below paddle's top
+    && (ball.getY() >= leftPaddle.getY() || //if the ball is above the paddle's base
+    ball.getY() + ball.getHeight() >= leftPaddle.getY()) && //if the ball is above the paddle's base
+    ball.getY() + ball.getHeight() <= leftPaddle.getY() + leftPaddle.getHeight()) //ball is below paddle's top
     {
     
-         System.out.println("LEFT: " + ball.getX() + " " + leftPaddle.getX());
         //Set Y speed to negative of current
         if(ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXSpeed()))
         {
@@ -90,11 +89,10 @@ public class Pong extends AbstractPong
     //see if the ball hits the right paddle
     if ((ball.getX() + ball.getWidth() >= rightPaddle.getX() + Math.abs(ball.getXSpeed()) &&
     (ball.getY() >= rightPaddle.getY() ||
-    ball.getY() + ball.getHeight() >= rightPaddle.getY() &&
-    ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight())))
+    ball.getY() + ball.getHeight() >= rightPaddle.getY()) &&
+    ball.getY() + ball.getHeight() <= rightPaddle.getY() + rightPaddle.getHeight()))
     {
     
-      System.out.println("RIGHT: " + ball.getX() + " " + rightPaddle.getX());
       //Set Y speed to negative of current
       if(ball.getX() >= rightPaddle.getX() + rightPaddle.getWidth() - Math.abs(ball.getXSpeed()))
       {
@@ -109,22 +107,22 @@ public class Pong extends AbstractPong
     }
 
     //see if the paddles need to be moved
-    if(keyIsPressed('W') == true)
+    if(keyIsPressed('Z') == true)
     {
       leftPaddle.moveDownAndDraw(window);
     }
 
-    if(keyIsPressed('Z') == true)
+    if(keyIsPressed('W') == true)
     {
       leftPaddle.moveUpAndDraw(window);
     }
 
-    if(keyIsPressed('I') == true)
+    if(keyIsPressed('M') == true)
     {
       rightPaddle.moveDownAndDraw(window);
     }
 
-    if(keyIsPressed('M') == true)
+    if(keyIsPressed('I') == true)
     {
       rightPaddle.moveUpAndDraw(window);
     }
